@@ -1,3 +1,5 @@
+@font-face{font-family:DOS;src:url(/assets/DOS.ttf)}
+
 /**
  * Reset some basic elements
  */
@@ -8,8 +10,6 @@ dl, dd, ol, ul, figure {
   padding: 0;
 
 }
-
-
 
 /**
  * Basic styling
@@ -70,7 +70,7 @@ figure > img {
 }
 
 figcaption {
-  font-size: $small-font-size;
+  // font-size: $small-font-size;
 }
 
 
@@ -79,7 +79,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit;
+  // margin-left: $spacing-unit;
 }
 
 li {
@@ -96,6 +96,8 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  color: $yellow;
 }
 
 
@@ -104,16 +106,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
-
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    color: #000;
+    background-color: $cyan;
+    // text-decoration: underline;
   }
 
   .social-media-list &:hover {
@@ -130,12 +129,12 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
-  letter-spacing: -1px;
-  font-style: italic;
+  // color: $grey-color;
+  // border-left: 4px solid $grey-color-light;
+  // padding-left: $spacing-unit / 2;
+  // @include relative-font-size(1.125);
+  // letter-spacing: -1px;
+  // font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
@@ -149,18 +148,19 @@ blockquote {
  */
 pre,
 code {
-  @include relative-font-size(0.9375);
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
+  // @include relative-font-size(0.9375);
+  // border: 1px solid $grey-color-light;
+  // border-radius: 3px;
+  font-family: DOS;
   background-color: #eef;
 }
 
 code {
-  padding: 1px 5px;
+  // padding: 1px 5px;
 }
 
 pre {
-  padding: 8px 12px;
+  // padding: 8px 12px;
   overflow-x: auto;
 
   > code {
@@ -176,12 +176,13 @@ pre {
  * Wrapper
  */
 .wrapper {
+  background-color: $blue;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
   max-width:         calc(#{$content-width} - (#{$spacing-unit}));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  // padding-right: $spacing-unit / 2;
+  // padding-left: $spacing-unit / 2;
   @extend %clearfix;
 
   @media screen and (min-width: $on-large) {
@@ -210,17 +211,17 @@ pre {
  */
 
 .orange {
-  color: $orange-color;
+  // color: $orange-color;
 }
 
 .grey {
-  color: $grey-color;
+  // color: $grey-color;
 }
 
 .svg-icon {
   width: 16px;
   height: 16px;
-  display: inline-block;
+  display: none;
   fill: currentColor;
   padding: 5px 3px 2px 5px;
   vertical-align: text-bottom;
@@ -236,21 +237,21 @@ table {
   text-align: $table-text-align;
   color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  // border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      // background-color: lighten($grey-color-light, 6%);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    // background-color: lighten($grey-color-light, 3%);
+    // border: 1px solid darken($grey-color-light, 4%);
+    // border-bottom-color: darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    // border: 1px solid $grey-color-light;
   }
 }
