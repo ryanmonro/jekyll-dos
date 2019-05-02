@@ -2,11 +2,9 @@
  * Site header
  */
 .site-header {
-  position: relative;
-  .wrapper {
-    background-color: $grey;
-    
-  }
+  
+  background-color: $grey;
+  @extend %clearfix;
   a:hover{
     background-color: #000;
     color: $grey;
@@ -14,14 +12,9 @@
 }
 
 .site-title {
-  // @include relative-font-size(1.625);
-  font-weight: 300;
-  // letter-spacing: -1px;
   color: #000;
   margin-bottom: 0;
   float: left;
-
-
 
   &,
   &:visited {
@@ -134,7 +127,7 @@
 
 .footer-heading {
   // @include relative-font-size(1.125);
-  margin-bottom: $spacing-unit / 2;
+  // margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
@@ -146,15 +139,15 @@
 .footer-col-wrapper {
   // @include relative-font-size(0.9375);
   // color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+  // margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
 
 .footer-col {
   width: -webkit-calc(100% - (#{$spacing-unit} / 2));
   width:         calc(100% - (#{$spacing-unit} / 2));
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  // margin-bottom: $spacing-unit / 2;
+  // padding-left: $spacing-unit / 2;
 }
 
 .footer-col-1,
@@ -198,7 +191,7 @@
  */
 .page-content {
   // padding: $spacing-unit 0;
-  background-color: #000;
+  // background-color: #000;
   color: white;
   flex: 1 0 auto;
 
