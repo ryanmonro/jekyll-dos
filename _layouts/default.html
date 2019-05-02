@@ -4,17 +4,20 @@
   {%- include head.html -%}
 
   <body>
-
-
-    <div class="screen">
-      {%- include header.html -%}
-      <main class="page-content" aria-label="Content">
-          {{ content }}
-      </main>
-      {%- include footer.html -%}
+    <div class="monitor">
+      <div class="screen">
+        <div class="dosbox">
+          {%- include header.html -%}
+          <main class="page-content" aria-label="Content">
+              {{ content }}
+          </main>
+          {%- include footer.html -%}
+          
+        </div>
+      </div>
+      <div class="led"></div>
     </div>
-
-
+    <div class="stand"></div>
+    <div class="base"></div>
   </body>
-
 </html>
