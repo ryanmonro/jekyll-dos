@@ -53,3 +53,29 @@
   height: 27em;
   padding: 1em 2ch;
 }
+
+.dos-border {
+  position: relative;
+  height: 23em;
+  background-color: $blue;
+  color: white;
+}
+
+.dos-content {
+  position: absolute;
+  top: 1em;
+  left: 2ch;
+  height: 21em;
+  width: 76ch;
+  overflow-y: auto;
+}
+
+.dos-border-left {
+  position: relative;
+}
+
+.dos-border-right {
+  position: absolute;
+  display: inline;
+  right: 0px;
+}

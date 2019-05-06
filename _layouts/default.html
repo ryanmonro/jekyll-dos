@@ -8,9 +8,11 @@
       <div class="screen">
         <div class="dosbox">
           {%- include header.html -%}
-          <main class="page-content" aria-label="Content">
-              {{ content }}
-          </main>
+          <div class="dos-border">
+            <main class="page-content dos-content" aria-label="Content">
+                {{ content }}
+            </main>
+          </div>
           {%- include footer.html -%}
           
         </div>
@@ -19,5 +21,34 @@
     </div>
     <div class="stand"></div>
     <div class="base"></div>
+    <script>
+      // draw border
+      var width = 80, height = 23;
+      var borderTop = String.fromCharCode(0xC9);
+      let borderBottom = String.fromCharCode(0xC8);
+      for (var i = 0; i < width - 2; i++){
+        borderTop += String.fromCharCode(0xCD);
+        borderBottom += String.fromCharCode(0xCD);
+      }
+      borderTop += String.fromCharCode(0xBB) + '\n';
+      borderBottom += String.fromCharCode(0xBC) + '\n';
+      var borderTopNode = document.createTextNode(borderTop);
+      var borderBottomNode = document.createTextNode(borderBottom);
+      var borderDiv = document.querySelector('.dos-border');
+      borderDiv.appendChild(borderTopNode);
+      for (var i = 0; i < height - 2; i++) {
+        // var borderLeftRightNode = document.createTextNode("a\n\n");
+        // borderDiv.appendChild(borderLeftRightNode);
+        let borderLeft = document.createElement('div');
+        let borderRight = document.createElement('div');
+        let borderChar = String.fromCharCode(0xBA);
+        borderRight.classList.add("dos-border-right");
+        borderLeft.appendChild(document.createTextNode(borderChar));
+        borderRight.innerText = String.fromCharCode(0xBA);
+        borderLeft.appendChild(borderRight);
+        borderDiv.appendChild(borderLeft);
+      }
+      borderDiv.appendChild(borderBottomNode);
+    </script>
   </body>
 </html>
